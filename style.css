@@ -1,0 +1,9 @@
+.myWatch{
+    text-align:center;
+    margin-top: 2rem;
+    background: rgb(236, 11, 11);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-weight: 600;
+    font-size: 3rem;
+}
