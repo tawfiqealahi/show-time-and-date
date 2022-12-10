@@ -19,15 +19,32 @@ function myTime() {
 
   const currentTime=hr +" : "+ min + " : "+ sec +" : ";
 
+  document.getElementsByClassName("H")[0].innerHTML =currentTime;
+  document.getElementsByClassName("M")[0].innerHTML=M;
 
-}
 
-const dayList = [
-  "saturday",
-  "sunday",
-  "monday",
-  "tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-];
+  const dayList = [
+    "sunday",
+    "monday",
+    "tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "saturday"
+  ];
+  const monthList=[
+    "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+  ];
+  const day = myDate.getDate();
+
+  const currentDate = dayList[myDate.getDay()] + ", " + monthList[myDate.getMonth()] + day; 
+  document.getElementsByClassName("date")[0].innerHTML=currentDate
+
+};
+
+myTime();
+setInterval(function(){
+    myTime();
+}, 1000);
+
+
